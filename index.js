@@ -11,8 +11,7 @@ const VERSION = require('./package.json').version;
 
 program.version(VERSION, '-v, --version');
 
-// 创建文件夹
-program.command("start <name>").action(async (name) => {
+async function runCompression(name) {
     if (fs.existsSync(name)) {
         const spinner = ora('开始压缩...\n');
 
@@ -53,6 +52,17 @@ program.command("start <name>").action(async (name) => {
         // 错误提示项目已存在，避免覆盖原有项目
         console.log(symbols.error, chalk.red('未找到文件夹或文件!'));
     }
+}
+
+// 创建文件夹
+program.command("start <name>").action(async (name) => {
+    runCompression(name)
+})
+program.command("run <name>").action(async (name) => {
+    runCompression(name)
+})
+program.command("compress <name>").action(async (name) => {
+    runCompression(name)
 })
 
 function getFileLen(path) {
