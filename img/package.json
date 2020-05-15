@@ -1,0 +1,28 @@
+{
+  "name": "imagebc",
+  "version": "1.0.0",
+  "description": "Han",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/han88829/batchCompression.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/han88829/batchCompression/issues"
+  },
+  "homepage": "https://github.com/han88829/batchCompression#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^3.0.2",
+    "handlebars": "^4.4.3",
+    "inquirer": "^7.0.0",
+    "log-symbols": "^3.0.0",
+    "ora": "^4.0.2",
+    "tinify": "^1.6.0-beta.2"
+  }
+}
