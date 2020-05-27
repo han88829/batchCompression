@@ -55,13 +55,25 @@ async function runCompression(name) {
 }
 
 // 创建文件夹
-program.command("start <name>").action(async (name) => {
+program.command("start <name> <key>").action(async (name, key) => {
+    if (key) {
+        console.log(`将使用 key:${key} 进行压缩\n`);
+        tinify.key = key;
+    }
     runCompression(name)
 })
-program.command("run <name>").action(async (name) => {
+program.command("run <name> <key>").action(async (name) => {
+    if (key) {
+        console.log(`将使用key:${key}进行压缩\n`);
+        tinify.key = key;
+    }
     runCompression(name)
 })
-program.command("compress <name>").action(async (name) => {
+program.command("compress <name> <key>").action(async (name) => {
+    if (key) {
+        console.log(`将使用key:${key}进行压缩\n`);
+        tinify.key = key;
+    }
     runCompression(name)
 })
 
